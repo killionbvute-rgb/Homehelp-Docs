@@ -2,7 +2,7 @@
 
 ## Status
 
-Planned
+Completed — 30 July 2026
 
 ## Objective
 
@@ -177,3 +177,110 @@ Sprint 04 is complete when:
 - AI integration boundary is established
 - Parent-facing guidance can be generated
 - Tests pass successfully
+
+---
+
+# Implementation Evidence
+
+## Repository
+
+Homehelp-institution
+
+## Completion Commit
+
+99438b3908646af9625b846d7af3defaf80db65f
+
+## Git Tag
+
+sprint-4-complete
+
+---
+
+# Delivered Capabilities
+
+Sprint 04 delivered:
+
+## Learner Intelligence Layer
+
+Implemented:
+
+- GuidanceContext
+- LearningRecommendation
+- EducationalGuidance
+
+The intelligence layer combines:
+
+- Learner Profile
+- Learner Insights
+- Knowledge Evolution history
+
+into a structured context for educational guidance generation.
+
+---
+
+## Personalised Guidance Workflow
+
+Implemented application workflows:
+
+- BuildGuidanceContext
+- CreateLearningRecommendation
+- GenerateEducationalGuidance
+- GetLearnerGuidanceHistory
+- GetLearnerRecommendations
+
+---
+
+## Responsible AI Boundary
+
+Implemented:
+
+- IGuidanceGenerator contract
+- GuidanceGenerationResult
+- InMemoryGuidanceGenerator
+
+AI capabilities remain outside the domain layer.
+
+The domain maintains:
+
+- Guidance lifecycle
+- Historical records
+- Educational concepts
+- Traceability
+
+---
+
+# Verification
+
+Sprint 04 completion verified through:
+
+- Successful TypeScript build
+- 37 passing test files
+- 52 passing tests
+
+---
+
+# Architectural Note
+
+Conversation context is consumed indirectly through Learner Insights.
+
+The system intentionally avoids coupling Learner Intelligence directly to Conversation entities.
+
+Flow:
+
+Parent Conversation
+
+↓
+
+Conversation Intelligence
+
+↓
+
+Learner Insights
+
+↓
+
+Learner Intelligence
+
+↓
+
+Personalised Guidance
