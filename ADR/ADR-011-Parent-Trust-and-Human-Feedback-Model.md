@@ -137,17 +137,19 @@ Parent feedback becomes part of the learner understanding journey without replac
 
 # Implementation Impact
 
-Implementation has commenced.
+Completed implementation:
 
-Implemented:
+- GuidanceReview aggregate lifecycle
+- GuidanceReview creation workflow
+- Parent guidance review interaction lifecycle
+- GuidanceReview domain events
+- Parent feedback capture foundation
+- Guidance review completion workflow
 
-- GuidanceReview aggregate foundation
-- GuidanceReview lifecycle states
-- GuidanceReviewCreated domain event
-- ParentGuidanceFeedback aggregate
-- ParentGuidanceFeedbackRecorded domain event
-- GuidanceExplanation model foundation
-- Parent feedback recording workflow
+Pending future integration:
+
+- Guidance explanation generation workflow
+- Feedback-driven Knowledge Evolution integration
 
 Application capabilities implemented:
 

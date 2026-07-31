@@ -1,264 +1,141 @@
-# Homehelp Traceability Matrix
+# Homehelp Architecture Traceability Matrix
 
-## 1. Introduction
+# Homehelp Architecture Traceability Matrix
 
-The Traceability Matrix provides visibility between business objectives, product capabilities, architecture, implementation, and validation.
+Version: 2.0
 
-Its purpose is to ensure that every major capability can be traced from intention to execution.
+Last Updated: Sprint 05 Completion
 
-The guiding principle:
+Status: Active Governance Document
 
-> Every line of code should exist because it delivers a meaningful capability.
+## Purpose
+
+This document provides traceability between business capabilities, architectural decisions, domain models, application workflows, domain events, and implementation evidence.
+
+The matrix ensures that:
+
+- Every capability has a clear architectural owner.
+- Domain concepts map to application behaviour.
+- AI-assisted functionality remains explainable and auditable.
+- Implementation decisions remain traceable to ADRs.
 
 ---
 
-# 2. Traceability Model
+# 1. Learner Identity Capability
 
-Homehelp follows:
+| Capability | Bounded Context | Domain Concepts | Application Workflows | Domain Events | ADR | Status |
+|---|---|---|---|---|---|---|
+| Learner identity management | Learner Profile | LearnerProfile, LearnerName, GradeLevel | CreateLearnerProfile | LearnerProfileCreated | ADR-003 | Implemented |
 
-```text
-Business Requirement
+---
 
-        |
+# 2. Learner Discovery Capability
 
-        v
+| Capability | Bounded Context | Domain Concepts | Application Workflows | Domain Events | ADR | Status |
+|---|---|---|---|---|---|---|
+| Learner information discovery | Discovery | DiscoverySession, DiscoveryResponse | CreateDiscoverySession, RecordDiscoveryResponse, CompleteDiscoverySession | DiscoveryStarted, DiscoveryCompleted | ADR-004 | Implemented |
 
-Product Capability
+---
 
-        |
+# 3. Learner Intelligence Capability
 
-        v
+## 3.1 Learner Insights
 
-Domain Concept
+| Capability | Bounded Context | Domain Concepts | Application Workflows | Events | ADR | Status |
+|---|---|---|---|---|---|---|
+| Understanding learner patterns | Learner Intelligence | LearnerInsight | RecordLearnerInsight, GenerateLearnerInsights | LearnerInsightRecorded | ADR-007 | Implemented |
 
-        |
+---
 
-        v
+## 3.2 Knowledge Evolution
 
-Application Workflow
+| Capability | Bounded Context | Domain Concepts | Application Workflows | Events | ADR | Status |
+|---|---|---|---|---|---|---|
+| Evolution of learner understanding | Learner Intelligence | KnowledgeEvolution | RecordKnowledgeEvolution, GetLearnerEvolutionHistory | KnowledgeEvolutionRecorded | ADR-007 | Implemented |
 
-        |
+---
 
-        v
+## 3.3 Learning Recommendations
 
-API Capability
+| Capability | Bounded Context | Domain Concepts | Application Workflows | Events | ADR | Status |
+|---|---|---|---|---|---|---|
+| Generate actionable learning suggestions | Learner Intelligence | LearningRecommendation | CreateLearningRecommendation, GetLearnerRecommendations | LearningRecommendationCreated | ADR-010 | Implemented |
 
-        |
+---
 
-        v
+## 3.4 Educational Guidance
 
-Implementation
+| Capability | Bounded Context | Domain Concepts | Application Workflows | Events | ADR | Status |
+|---|---|---|---|---|---|---|
+| Generate personalised educational guidance | Learner Intelligence | EducationalGuidance, GuidanceContext | GenerateEducationalGuidance, BuildGuidanceContext | EducationalGuidanceCreated | ADR-010 | Implemented |
 
-        |
+---
 
-        v
+# 4. Parent Trust Capability
 
-Testing
+| Capability | Bounded Context | Domain Concepts | Application Workflows | Domain Events | ADR | Status |
+|---|---|---|---|---|---|---|
+| Transparent parent interaction with AI guidance | Learner Intelligence | GuidanceReview, ParentGuidanceFeedback, GuidanceExplanation | CreateGuidanceReview, ViewGuidanceReview, AcknowledgeGuidanceReview, QuestionGuidanceReview, CompleteGuidanceReview, RecordParentGuidanceFeedback, CreateGuidanceExplanation | GuidanceReviewCreated, GuidanceReviewViewed, GuidanceReviewAcknowledged, GuidanceReviewQuestioned, GuidanceReviewCompleted, ParentGuidanceFeedbackRecorded | ADR-011 | Implemented |
 
-| Capability           | Business Purpose                                             | Domain Object                                                                                  | Use Case                                               | Implementation                         |
-| -------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------- |
-| Learner Discovery    | Understand learner context                                   | DiscoverySession                                                                               | CompleteDiscoverySession                               | packages/domain + packages/application |
-| Learner Profile      | Maintain learner understanding                               | LearnerProfile                                                                                 | GenerateLearnerProfileFromDiscovery                    | packages/domain + packages/application |
-| Learner Intelligence | Extract meaningful understanding from learner interactions   | LearnerInsight / LearningRecommendation                                                        | GenerateLearnerInsights / CreateLearningRecommendation | packages/domain + packages/application |
-| Educational Guidance | Generate personalised educational support                    | EducationalGuidance                                                                            | GenerateEducationalGuidance                            | packages/domain + packages/application |
-| Parent Trust         | Build confidence through transparent AI guidance interaction | GuidanceReview / ParentGuidanceFeedback                                                        | RecordParentGuidanceFeedback                           | packages/domain + packages/application |
-| Domain Events        | Enable system reactions                                      | DiscoveryStarted / DiscoveryCompleted / GuidanceReviewCreated / ParentGuidanceFeedbackRecorded | Event handling                                         | packages/domain                        |
+---
 
+# 5. Domain Event Traceability
 
-4. Learner Discovery Capability
-Business Requirement
+| Aggregate | Events |
+|---|---|
+| LearnerProfile | LearnerProfileCreated |
+| DiscoverySession | DiscoveryStarted, DiscoveryCompleted |
+| LearnerInsight | LearnerInsightRecorded |
+| KnowledgeEvolution | KnowledgeEvolutionRecorded |
+| LearningRecommendation | LearningRecommendationCreated |
+| EducationalGuidance | EducationalGuidanceCreated |
+| GuidanceReview | GuidanceReviewCreated, GuidanceReviewViewed, GuidanceReviewAcknowledged, GuidanceReviewQuestioned, GuidanceReviewCompleted |
+| ParentGuidanceFeedback | ParentGuidanceFeedbackRecorded |
 
-Parents need a structured way to communicate learner information.
+---
 
-Product Capability
+# 6. Validation Evidence
 
-Learner Discovery Journey.
+| Capability | Evidence |
+|---|---|
+| Domain Layer | Successful TypeScript compilation |
+| Application Layer | Successful TypeScript compilation |
+| Application Behaviour | Automated test suite passing |
+|| Current Validation Snapshot | Sprint 05 validation: 45 test files passing, 62 tests passing |
 
-Domain Model
-DiscoverySession
-Application Workflow
-CompleteDiscoverySession
-Outcome
+API / Interface Boundary
 
-Completed discovery information.
+Pending API implementation
 
-5. Learner Profile Capability
-Business Requirement
+---
 
-Institutions need a trusted understanding of each learner.
+# 7. Change Impact Analysis
 
-Product Capability
+Before changing functionality, identify the affected:
 
-Living Learner Profile.
+- Business capability
+- Bounded context
+- Domain aggregates
+- Value objects
+- Application use cases
+- Repository contracts
+- Tests
+- ADRs
+- Documentation artifacts
 
-Domain Model
-LearnerProfile
-Application Workflow
-GenerateLearnerProfileFromDiscovery
+Any architectural change must update the relevant traceability entries.
 
-Outcome
+---
 
-Structured learner understanding.
-
-6. Learner Intelligence Capability
-Business Requirement
-
-The system must extract meaningful understanding from conversations and learner interactions.
-
-Product Capability
-
-AI-powered learner understanding.
-
-Domain Model
-
-LearnerInsight
-
-LearningRecommendation
-
-EducationalGuidance
-
-Application Workflow
-
-GenerateLearnerInsights
-
-        |
-
-        v
-
-CreateLearningRecommendation
-
-        |
-
-        v
-
-GenerateEducationalGuidance
-
-Outcome
-
-Actionable educational understanding derived from learner context.
-
-7. Parent Trust Capability
-Business Requirement
-
-Parents need confidence that AI-generated guidance is understandable, reviewable, and aligned with their knowledge of the learner.
-
-Product Capability
-
-Parent Trust and Guidance Review.
-
-Domain Model
-
-EducationalGuidance
-
-        |
-
-        v
-
-GuidanceReview
-
-        |
-
-        v
-
-ParentGuidanceFeedback
-
-Application Workflow
-
-GenerateEducationalGuidance
-
-        |
-
-        v
-
-RecordParentGuidanceFeedback
-
-Outcome
-
-A transparent feedback loop between AI-generated guidance and parent understanding.
-
-Parent interaction becomes an auditable part of learner intelligence evolution.
-
-8. AI Capability Traceability
-Business Requirement
-
-Extract useful understanding from conversations.
-
-Product Capability
-
-AI Learning Companion.
-
-Domain Impact
-
-Implemented:
-
-LearnerInsight
-LearningRecommendation
-EducationalGuidance
-GuidanceReview
-ParentGuidanceFeedback
-
-AI Component
-
-Conversation Intelligence.
-
-Status
-
-Core architecture implemented.
-
-Future expansion includes advanced AI orchestration and model governance.
-
-| Capability                      | Test Type                    |
-| ------------------------------- | ---------------------------- |
-| Discovery completion            | Application tests            |
-| Learner profile creation        | Domain and application tests |
-| Learner intelligence generation | Application tests            |
-| Educational guidance generation | Application tests            |
-| Parent guidance feedback        | Application tests            |
-| Value Objects                   | Unit tests                   |
-| Domain Events                   | Domain tests                 |
-
-
-10. Change Impact Analysis
-
-Before changing functionality:
-
-Identify:
-
-Business capability affected
-Domain objects affected
-Use cases affected
-Interfaces affected
-Tests affected
-Documentation affected
-11. Governance Rules
+# 8. Governance Rules
 
 New functionality requires:
 
-documented purpose
-architecture consideration
-domain impact analysis
-implementation reference
-testing evidence
-traceability update
-12. Future Expansion
+- Documented business purpose
+- Architectural consideration
+- Domain impact analysis
+- Implementation reference
+- Testing evidence
+- Traceability update
 
-The traceability model will expand to include:
-
-AI model versions
-data lineage
-security controls
-compliance requirements
-operational metrics
-13. Conclusion
-
-The Traceability Matrix ensures Homehelp remains understandable as it grows.
-
-It connects the reason something exists with how it is implemented.
-
-Traceability protects both technology and institutional knowledge.
-
-
-After saving, run:
-
-```powershell
-git diff Governance\Traceability-Matrix.md
+The Traceability Matrix must remain aligned with the implemented architecture.
