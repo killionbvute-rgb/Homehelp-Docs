@@ -80,3 +80,25 @@ Future capability changes require:
 ## Conclusion
 
 The capability-driven roadmap provides Homehelp with a sustainable execution model that supports continuous evolution while preserving architectural integrity.
+
+## Capability Portfolio Protection
+
+The capability-driven roadmap preserves strategic capabilities independently of sprint sequencing.
+
+The following capability areas remain protected roadmap commitments:
+
+- Learner Understanding Foundation
+- Learner Knowledge Evolution
+- Conversation Intelligence
+- AI Prompt Engine and Intelligence Orchestration
+- Learner Intelligence
+- Parent Trust and Explainability
+- Visual Learning Support
+- Learning Progress Intelligence
+- Parent Coaching Intelligence
+- School Integration
+- Multi-Learner Family Support
+- Personalised Learning Plans
+- Production Excellence and Governance
+
+Capabilities may be delivered in different sprint increments based on learning, dependency discovery, user value and architectural priorities, but roadmap governance must ensure that strategic capability intent is preserved.
