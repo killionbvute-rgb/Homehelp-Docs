@@ -4,9 +4,57 @@
 
 Version: 2.0
 
-Last Updated: Sprint 05 Completion
+Last Updated: Roadmap v2 Capability Alignment
 
 Status: Active Governance Document
+
+# Capability Portfolio Traceability
+
+The following capabilities represent the strategic commitments defined in Product Execution Roadmap v2.
+
+| Capability | Current Status | Primary Bounded Context | Evidence |
+|---|---|---|---|
+| Learner Understanding Foundation | Implemented | Learner Profile / Discovery | ADR-003, ADR-004 |
+| Learner Knowledge Evolution | Implemented | Learner Intelligence | ADR-007 |
+| Conversation Intelligence | Implemented Foundation | Conversation | ADR-009 |
+| AI Prompt Engine and Intelligence Orchestration | Planned | AI Intelligence | Pending |
+| Learner Intelligence | Implemented | Learner Intelligence | ADR-007, ADR-010 |
+| Parent Trust and Explainability | Implemented | Learner Intelligence | ADR-011 |
+| Visual Learning Support | Planned | Learning Experience | Pending |
+| Learning Progress Intelligence | Planned | Learner Intelligence | Pending |
+| Parent Coaching Intelligence | Partially Implemented | Learner Intelligence | ADR-010 |
+| School Integration | Planned | Collaboration | Pending |
+| Multi-Learner Family Support | Planned | Family | Pending |
+| Personalised Learning Plans | Planned | Learning Experience | Pending |
+| Production Excellence and Governance | Ongoing | Platform Governance | ADR-012 |
+
+## AI Prompt Engine and Intelligence Orchestration
+
+Status:
+
+Planned Capability
+
+Bounded Context:
+
+AI Intelligence
+
+Current State:
+
+AI-assisted analysis flows exist within existing conversation workflows.
+
+Missing Capability Components:
+
+- Prompt templates
+- Prompt versioning
+- Prompt evaluation framework
+- Model routing
+- Safety constraints
+- AI reasoning traceability
+
+Roadmap Position:
+
+Future implementation capability defined in Product Execution Roadmap v2.
+
 
 ## Purpose
 
@@ -139,3 +187,23 @@ New functionality requires:
 - Traceability update
 
 The Traceability Matrix must remain aligned with the implemented architecture.
+
+# Roadmap v2 Alignment
+
+The traceability model has been updated from sprint-oriented tracking to capability-oriented governance.
+
+Previous sprint references remain as implementation history.
+
+Future delivery decisions shall trace:
+
+Capability
+↓
+Bounded Context
+↓
+Domain Model
+↓
+Application Workflow
+↓
+Tests
+↓
+Evidence
