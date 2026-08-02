@@ -116,18 +116,6 @@ Confidence originates from learner insights and is preserved with the evolution 
 
 ---
 
-## Evidence References
-
-Purpose:
-
-Maintain traceability between learner changes and supporting information.
-
-Example:
-
-
-Confidence originates from learner insights and is preserved with the evolution record.
-
----
 
 ## Evidence References
 
