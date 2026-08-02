@@ -1,12 +1,12 @@
 # Homehelp Architecture Traceability Matrix
 
-# Homehelp Architecture Traceability Matrix
+Version: 2.1
 
-Version: 2.0
-
-Last Updated: Roadmap v2 Capability Alignment
+Last Updated: Sprint 06 Learner Knowledge Evolution Intelligence Alignment
 
 Status: Active Governance Document
+
+---
 
 # Capability Portfolio Traceability
 
@@ -15,7 +15,7 @@ The following capabilities represent the strategic commitments defined in Produc
 | Capability | Current Status | Primary Bounded Context | Evidence |
 |---|---|---|---|
 | Learner Understanding Foundation | Implemented | Learner Profile / Discovery | ADR-003, ADR-004 |
-| Learner Knowledge Evolution | Implemented | Learner Intelligence | ADR-007 |
+| Learner Knowledge Evolution | Implemented | Learner Intelligence | ADR-007, ADR-013 |
 | Conversation Intelligence | Implemented Foundation | Conversation | ADR-009 |
 | AI Prompt Engine and Intelligence Orchestration | Planned | AI Intelligence | Pending |
 | Learner Intelligence | Implemented | Learner Intelligence | ADR-007, ADR-010 |
@@ -28,37 +28,18 @@ The following capabilities represent the strategic commitments defined in Produc
 | Personalised Learning Plans | Planned | Learning Experience | Pending |
 | Production Excellence and Governance | Ongoing | Platform Governance | ADR-012 |
 
-## AI Prompt Engine and Intelligence Orchestration
+---
 
-Status:
+# Purpose
 
-Planned Capability
+This document provides traceability between:
 
-Bounded Context:
-
-AI Intelligence
-
-Current State:
-
-AI-assisted analysis flows exist within existing conversation workflows.
-
-Missing Capability Components:
-
-- Prompt templates
-- Prompt versioning
-- Prompt evaluation framework
-- Model routing
-- Safety constraints
-- AI reasoning traceability
-
-Roadmap Position:
-
-Future implementation capability defined in Product Execution Roadmap v2.
-
-
-## Purpose
-
-This document provides traceability between business capabilities, architectural decisions, domain models, application workflows, domain events, and implementation evidence.
+- Business capabilities
+- Architectural decisions
+- Domain models
+- Application workflows
+- Domain events
+- Implementation evidence
 
 The matrix ensures that:
 
@@ -99,7 +80,7 @@ The matrix ensures that:
 
 | Capability | Bounded Context | Domain Concepts | Application Workflows | Events | ADR | Status |
 |---|---|---|---|---|---|---|
-| Evolution of learner understanding | Learner Intelligence | KnowledgeEvolution | RecordKnowledgeEvolution, GetLearnerEvolutionHistory | KnowledgeEvolutionRecorded | ADR-007 | Implemented |
+| Evolution of learner understanding | Learner Intelligence | KnowledgeEvolution, KnowledgeEvolution Confidence, Evidence References | RecordKnowledgeEvolution, GetLearnerEvolutionHistory, GetLearnerEvolutionHistoryWithContext | KnowledgeEvolutionRecorded | ADR-007, ADR-013 | Implemented |
 
 ---
 
@@ -148,12 +129,10 @@ The matrix ensures that:
 |---|---|
 | Domain Layer | Successful TypeScript compilation |
 | Application Layer | Successful TypeScript compilation |
+| Infrastructure Layer | Successful TypeScript compilation |
+| API Layer | Successful TypeScript compilation |
 | Application Behaviour | Automated test suite passing |
-|| Current Validation Snapshot | Sprint 05 validation: 45 test files passing, 62 tests passing |
-
-API / Interface Boundary
-
-Pending API implementation
+| Current Validation Snapshot | Sprint 06 validation: 46 test files passing, 63 tests passing |
 
 ---
 
@@ -188,22 +167,50 @@ New functionality requires:
 
 The Traceability Matrix must remain aligned with the implemented architecture.
 
+---
+
 # Roadmap v2 Alignment
 
-The traceability model has been updated from sprint-oriented tracking to capability-oriented governance.
+The traceability model follows capability-oriented governance.
 
-Previous sprint references remain as implementation history.
+Sprint references remain as implementation history.
 
 Future delivery decisions shall trace:
 
 Capability
-↓
+|
+v
 Bounded Context
-↓
+|
+v
 Domain Model
-↓
+|
+v
 Application Workflow
-↓
+|
+v
 Tests
-↓
+|
+v
 Evidence
+
+
+---
+
+# Sprint 06 Alignment Summary
+
+Sprint 06 extended Learner Knowledge Evolution from a historical record mechanism into an explainable intelligence model.
+
+Traceability additions:
+
+- ADR-013 Knowledge Evolution Intelligence Model
+- Knowledge Evolution confidence tracking
+- Evidence reference foundation
+- Contextual learner evolution history retrieval
+
+The capability now supports future:
+
+- Trend detection
+- Pattern recognition
+- Evidence-backed AI reasoning
+- Personalised guidance evolution
