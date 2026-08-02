@@ -130,16 +130,23 @@ Memory creation must respect privacy, transparency, and responsible AI principle
 
 # 6. Implementation Direction
 
-Sprint 04 will introduce:
+The Learner Memory capability has been approved architecturally but has not yet been implemented.
+
+Implementation will be undertaken in a future capability-focused sprint after completion of the Knowledge Evolution Intelligence foundation and the Prompt Orchestration Platform.
+
+The implementation is expected to introduce:
 
 - LearnerMemory aggregate
 - Memory classification
 - Memory importance model
 - Memory confidence model
-- Memory creation events
-- Repository abstraction
+- Memory lifecycle management
+- Memory creation domain events
+- Repository abstractions
 - Application workflows
 - Automated tests
+
+This staged approach preserves architectural integrity while ensuring that Learner Memory is built on a mature intelligence foundation.
 
 ---
 
