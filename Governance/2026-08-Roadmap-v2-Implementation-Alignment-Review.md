@@ -98,9 +98,7 @@ This capability requires dedicated architectural definition.
 
 Planned governance artifact:
 
-`ADR-013-AI-Prompt-Engine-Intelligence-Orchestration-Boundary.md`
-
----
+`Future ADR — AI Prompt Engine and Intelligence Orchestration Boundary`
 
 ## 5.2 Visual Learning Support
 
