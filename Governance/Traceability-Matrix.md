@@ -27,6 +27,17 @@ The following capabilities represent the strategic commitments defined in Produc
 | Multi-Learner Family Support | Planned | Family | Pending |
 | Personalised Learning Plans | Planned | Learning Experience | Pending |
 | Production Excellence and Governance | Ongoing | Platform Governance | ADR-012 |
+## Sprint 14 Traceability
+
+| Layer | Artefact | Reference |
+|---|---|---|
+| Roadmap | Sprint 14 — Learner Intelligence Evolution | Roadmap/Product-Execution-Roadmap.md |
+| Evolution Review | Sprint 13 → Sprint 14 Evolution Review | Governance/Roadmap-Evolution-Reviews/2026-08-Sprint-13-to-Sprint-14-Evolution-Review.md |
+| Domain Design | Learner Intelligence Evolution Domain Design | Architecture/Domain-Design-Reviews/DDR-003-Learner-Intelligence-Evolution.md |
+| Blueprint | Sprint 14 Blueprint | Sprint-Blueprints/Sprint-14-Learner-Intelligence-Evolution.md |
+| Backlog | Sprint 14 Backlog | Sprint-Backlogs/Sprint-14-Learner-Intelligence-Evolution-Backlog.md |
+| Implementation | LearnerIntelligenceEvolution Aggregate | packages/domain |
+| Validation | Sprint Completion Review | Governance/Sprint-Completion-Reviews |
 
 ---
 
@@ -214,3 +225,32 @@ The capability now supports future:
 - Pattern recognition
 - Evidence-backed AI reasoning
 - Personalised guidance evolution
+
+## Sprint 14 Capability Evolution Chain
+
+Learner Signals
+|
+v
+LearnerInsight
+|
+v
+LearnerIntelligenceEvolution
+|
+v
+Evolving Learner Understanding
+|
+v
+Future Capabilities
+(Personalised Guidance,
+Learning Progress Intelligence,
+Adaptive Learning Support)
+
+
+## Governance Approval
+
+Sprint 14 Learner Intelligence Evolution is approved through:
+
+- Roadmap Evolution Review
+- DDR-003 Domain Design Review
+- Blueprint Approval
+- Backlog Approval
